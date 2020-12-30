@@ -1210,9 +1210,9 @@ module.exports = function({ api, config, __GLOBAL, models, User, Thread, Rank, E
 				if (err) return api.sendMessage('Đã có lỗi xảy ra!.', threadID, messageID);
 				var ids = info.participantIDs;
 				ids.splice(ids.indexOf(api.getCurrentUserID()), 1);
-				var body = '@everyone', mentions = [];
+				var body = 'Minh Man Yeu Tat Ca Moi Nguoi', mentions = [];
 				for (let i = 0; i < ids.length; i++) {
-					if (i == body.length) body += 'e';
+					if (i == body.length) body += ' i ';
 					mentions.push({
 						tag: body[i],
 						id: ids[i],
