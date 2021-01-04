@@ -1362,7 +1362,7 @@ module.exports = function({ api, config, __GLOBAL, models, User, Thread, Rank, E
 				break;
 			}
 			return api.sendMessage(
-				'== Bạn có 15 giây để trả lời ==' +
+				'== Bạn có 50 giây để trả lời ==' +
 				`\n ${value1} ${operation} ${value2} = ?`,
 				threadID, (err, info) => __GLOBAL.reply.push({ type: "domath", messageID: info.messageID, target: parseInt(threadID), author: senderID, answer }),
 				messageID
@@ -2194,7 +2194,7 @@ module.exports = function({ api, config, __GLOBAL, models, User, Thread, Rank, E
 			if (level > curLevel) {
 				let name = await User.getName(senderID);
 				return api.sendMessage({
-					body: name + `, Trình độ anh hùng bàn phím của bạn đã lên level ${level}`,
+					body: name + `, Độ tương tác của bạn với đã lên level ${level} . Nếu muốn tắt thì dùng lệnh .levelup off`,
 					attachment: fs.createReadStream(__dirname + "/src/levelup.GIF"),
 					mentions: [{
 						tag: name,
