@@ -208,7 +208,7 @@ module.exports = function({ api, config, __GLOBAL, User, Thread, Economy, Fishin
 					break;
 				}
 				case "domath": {
-					const timeout = event.messageReply.timestamp + 15000;
+					const timeout = event.messageReply.timestamp + 50000;
 					if (event.timestamp - timeout >= 0) return api.sendMessage(`Bạn đã hết thời gian để trả lời câu hỏi này!`, threadID);
 					(body == replyMessage.answer) ? api.sendMessage(`Bing bong, kết quả của bạn hoàn toàn chính xác!\nBạn đã trả lời câu hỏi này trong vòng ${(event.timestamp - event.messageReply.timestamp) / 1000} giây!`, threadID) : api.sendMessage(`ahh, có vẻ bạn đã trả lời sai, câu trả lời đúng là: ${replyMessage.answer}`, threadID);
 					__GLOBAL.reply.splice(indexOfReply, 1);
