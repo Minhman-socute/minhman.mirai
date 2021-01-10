@@ -931,7 +931,7 @@ module.exports = function({ api, config, __GLOBAL, models, User, Thread, Rank, E
 		}
 
 		//prefix
-		if (contentMessage == 'prefix') return api.sendMessage(`Prefix là: ${prefix}`, threadID, messageID);
+		if (contentMessage == 'prefix') return api.sendMessage(`Prefix là: / và ${prefix}`, threadID, messageID);
 
 		//credits
 		if (contentMessage == "credits") return api.sendMessage("Project Mirai được thực hiện bởi:\nSpermLord: https://fb.me/MyNameIsSpermLord\nCatalizCS: https://fb.me/Cataliz2k\nFull source code at: https://github.com/roxtigger2003/mirai", threadID, messageID);
